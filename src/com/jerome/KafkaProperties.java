@@ -2,7 +2,7 @@ package com.jerome;
 
 public interface KafkaProperties
 {
-  final static String zkConnect = "BITEST12.VCLK.NET:2181";
+  final static String zkConnect = "BITEST10.VCLK.NET:2181";
   final static  String groupId = "group1";
   final static String topic = "topic1";
   final static String kafkaServerURL = "BITEST10.VCLK.NET";
