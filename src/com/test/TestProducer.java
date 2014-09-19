@@ -9,7 +9,7 @@ import kafka.producer.ProducerConfig;
 public class TestProducer {
 	 public static void main(String[] args) {   
          Properties props = new Properties();   
-         props.setProperty("metadata.broker.list","app102.dev.la.vcinv.net:9092");   
+         props.setProperty("metadata.broker.list","192.168.145.23:9092");   //can not use hostname 
          props.setProperty("serializer.class","kafka.serializer.StringEncoder");   
          props.put("request.required.acks","1");   
          ProducerConfig config = new ProducerConfig(props);   
@@ -18,7 +18,7 @@ public class TestProducer {
          try {   
              int i =1; 
              while(i < 1000){ 
-                    
+                 System.out.println(data);
                  producer.send(data);   
              } 
          } catch (Exception e) {   
