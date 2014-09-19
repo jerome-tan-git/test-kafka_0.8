@@ -18,6 +18,7 @@ package com.test;
 
 
 import java.util.Properties;
+
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
 
@@ -46,6 +47,13 @@ public class Producer extends Thread
       String messageStr = new String("Message_" + messageNo);
       producer.send(new KeyedMessage<Integer, String>(topic, messageStr));
       messageNo++;
+      System.out.println(messageNo);
+      try {
+		Thread.sleep(500);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
     }
   }
 

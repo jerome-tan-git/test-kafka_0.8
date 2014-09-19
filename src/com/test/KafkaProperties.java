@@ -18,7 +18,7 @@ package com.test;
 
 public interface KafkaProperties
 {
-  final static String zkConnect = "192.168.103.18:2181";
+  final static String zkConnect = "dpsjob103.dev.la.mezimedia.com:2181";
   final static  String groupId = "group1";
   final static String topic = "my-replicated-topic_1";
   final static String kafkaServerURL = "bitest10.vclk.net";
