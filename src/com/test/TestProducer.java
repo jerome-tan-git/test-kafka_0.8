@@ -14,12 +14,15 @@ public class TestProducer {
          props.put("request.required.acks","1");   
          ProducerConfig config = new ProducerConfig(props);   
          Producer<String, String> producer = new Producer<String, String>(config);   
-         KeyedMessage<String, String> data = new KeyedMessage<String, String>("mykafka","test-kafka");   
+            
          try {   
              int i =1; 
-             while(i < 1000){ 
+             while(i < 1000){
+            	 KeyedMessage<String, String> data = new KeyedMessage<String, String>("mykafka","test-kafka "+i);
                  System.out.println(data);
                  producer.send(data);   
+                 Thread.sleep(500);
+                 i++;
              } 
          } catch (Exception e) {   
              e.printStackTrace();   

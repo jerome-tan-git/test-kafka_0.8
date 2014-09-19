@@ -27,7 +27,6 @@ public class TestConsumer {
         System.out.println("*********Results********");   
         while(true){   
             if(it.hasNext()){ 
-                   
                 System.err.println("get data:" +new String(it.next().message()));   
             } 
 //            try {   
